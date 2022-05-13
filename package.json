@@ -1,0 +1,19 @@
+{
+  "name": "biovis-upload",
+  "version": "0.0.0",
+  "main": "index.js",
+  "type": "module",
+  "author": "Trevor Manz",
+  "license": "ISC",
+  "scripts": {
+    "dev": "wrangler dev index.js",
+    "release": "wrangler publish index.js"
+  },
+  "dependencies": {
+    "crypto-js": "^4.1.1",
+    "oauth-1.0a": "^2.2.6"
+  },
+  "devDependencies": {
+    "wrangler": "^2.0.5"
+  }
+}
