@@ -85,7 +85,8 @@ class Twitter {
 
 export default {
 	/**
-	 * Cloudflare Worker [Module](https://developers.cloudflare.com/workers/wrangler/module-system/)
+	 * Cloudflare Worker [Module](https://developers.cloudflare.com/workers/wrangler/module-system/).
+	 * Requires global `fetch` to be polyfilled if running in Node.js earlier than v18.
 	 *
 	 * @param {Request} request
 	 * @param {Env} env
