@@ -13,10 +13,11 @@ This module is compatible natively with Node.js v18 or later. Earlier versions o
 import * as fsp from "node:fs/promises";
 import worker from "./index.js";
 
-let data = await fsp.readFile("./data.jpeg", { encoding: "base64" });
 let request = new Request("https://example.com", {
-    method: "POST",
-    body: JSON.stringify({ data }),
+  method: "POST",
+  body: JSON.stringify({ 
+    data: await fsp.readFile("./data.jpeg", { encoding: "base64" }),
+  }),
 });
 worker
     .fetch(request, process.env)
